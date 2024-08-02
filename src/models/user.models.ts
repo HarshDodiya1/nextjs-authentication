@@ -8,8 +8,8 @@ export interface User extends Document {
   isAdmin: boolean;
   forgotPasswordToken: string;
   forgotPasswordTokenExpiry: Date;
-  verifyToken: string;
-  verifyTokenExpiry: Date;
+  verifyToken: string | undefined;
+  verifyTokenExpiry: Date | undefined;
 }
 
 const UserSchema: Schema<User> = new mongoose.Schema({
