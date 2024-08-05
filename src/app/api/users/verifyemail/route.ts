@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
 
     //get token from request body
     const { token } = reqBody;
-    console.log(token);
+    console.log("This is the token from /api/users/verifyemail: ", token);
 
     //check if user exists in db
     const user = await User.findOne({
